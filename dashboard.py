@@ -141,7 +141,7 @@ if mask_file:
     map_center = [(map_bounds[1] + map_bounds[3]) / 2, (map_bounds[0] + map_bounds[2]) / 2]
     st.caption(f"Mask grid CRS: {mask_crs} · Choose layers in the sidebar")
 
-m = folium.Map(location=map_center, zoom_start=11, tiles="CartoDB positron", control_scale=True)
+m = folium.Map(location=map_center, zoom_start=11, tiles="OpenStreetMap", control_scale=True)
 if mask_data is not None and show_flood and map_bounds:
     mask = mask_data[0]
     rgba = np.zeros((mask.shape[0], mask.shape[1], 4), dtype=np.uint8)
